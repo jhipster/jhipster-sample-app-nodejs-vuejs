@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  gen-mongodb:
+    image: mongo:4.4.4
+    environment:
+      #   - MONGO_INITDB_DATABASE=gen
+      - MONGO_INITDB_ROOT_USERNAME=sa
+      - MONGO_INITDB_ROOT_PASSWORD=yourStrong(!)Password
+    ports:
+      - '27018:27017'
+    # volumes:
+    #     - ~/volumes/jhipster/gen/mongodb/:/data/db/
