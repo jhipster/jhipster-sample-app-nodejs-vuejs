@@ -1,14 +1,16 @@
+import { Transform } from 'class-transformer';
+
 /**
- * A DTO base objct.
+ * A DTO base object.
  */
 export class BaseDTO {
-  id?: string;
+    @Transform(id => (id?.toHexString ? id?.toHexString() : id), { toPlainOnly: true }) id?: string;
 
-  createdBy?: string;
+    createdBy?: string;
 
-  createdDate?: Date;
+    createdDate?: Date;
 
-  lastModifiedBy?: string;
+    lastModifiedBy?: string;
 
-  lastModifiedDate?: Date;
+    lastModifiedDate?: Date;
 }

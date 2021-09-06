@@ -4,7 +4,7 @@ import { BaseEntity } from './base/base.entity';
 
 @Entity('nhi_authority')
 export class Authority extends BaseEntity {
-  @ApiModelProperty({ example: 'ROLE_USER', description: 'User role' })
-  @Column({ unique: true })
-  name: string;
+    @ApiModelProperty({ example: 'ROLE_USER', description: 'User role' })
+    @Column({ unique: true })
+    name: string;
 }
